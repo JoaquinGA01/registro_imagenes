@@ -68,51 +68,51 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Galeria</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Galeria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
 
-	<link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/salvattore.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/salvattore.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 
 <body>
 
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<a class="navbar-brand" href="index2.html">Galeria Plantas</a>
-					<a href="logout.php" class="btn btn-success pull-right"> Cerrar sesión</a>
-				</div>
-			</div>
-			<?php 
+    <header id="fh5co-header" role="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="navbar-brand" href="index2.html">Galeria Plantas</a>
+                    <a href="logout.php" class="btn btn-success pull-right"> Cerrar sesión</a>
+                </div>
+            </div>
+            <?php 
 			
 			?>
-		</div>
-	</header>
+        </div>
+    </header>
 
-	<div id="fh5co-main">
-		<div class="container">
+    <div id="fh5co-main">
+        <div class="container">
 
-			<div class="row">
+            <div class="row">
 
-				<div id="fh5co-board" data-columns>
+                <div id="fh5co-board" data-columns>
 
-				<?php
+                    <?php
 						$dbHost     = 'localhost';
 						$dbUsername = 'root';
 						$dbPassword = '';
@@ -125,24 +125,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 						while ($respuesta = $res->fetch_array()){
 					?>
 
-					<div class="item">
-						<div class="animate-box">
-							<a href="data:image/png;base64,<?php echo  base64_encode($respuesta['Imagen']); ?> " class="image-popup fh5co-board-img"
-							title="<?php echo $respuesta['Descripcion'] ?>">	
-							<img width="200" src="data:image/png;base64,<?php echo  base64_encode($respuesta['Imagen']); ?> "> 
-						</a>
-						</div>
-						<div class="fh5co-desc"> <h3><?php echo $respuesta['Nombre'] ?> </h3>  </div>
-						<div class="fh5co-desc"> <?php echo $respuesta['Descripcion'] ?>   </div>
-					</div>
+                    <div class="item">
+                        <div class="animate-box">
+                            <a href="data:image/png;base64,<?php echo  base64_encode($respuesta['Imagen']); ?> "
+                                class="image-popup fh5co-board-img" title="<?php echo $respuesta['Descripcion'] ?>">
+                                <img width="200"
+                                    src="data:image/png;base64,<?php echo  base64_encode($respuesta['Imagen']); ?> ">
+                            </a>
+                        </div>
+                        <div class="fh5co-desc">
+                            <h3><?php echo $respuesta['Nombre'] ?> </h3>
+                        </div>
+                        <div class="fh5co-desc"> <?php echo $respuesta['Descripcion'] ?> </div>
+                    </div>
 
 
-					<?php }} ?>
-				</div>
-			</div>
-		</div>
-	</div>
-	<?php
+                    <?php }} ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
 	if($_SESSION["Rol"]){
 		echo '<div id="fh5co-main">';
 		echo '<div class="container">';
@@ -176,33 +179,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	echo '</div>';
 	}
 	?>
-	
-	<footer id="fh5co-footer">
 
-		<div class="container">
-			<div class="row row-padded">
-				<div class="col-md-12 text-center">
-					<p><small> <br>Designed by: <a href="https://github.com/JoaquinGA01/" target="_blank">JoaquinGA</a>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <footer id="fh5co-footer">
+
+        <div class="container">
+            <div class="row row-padded">
+                <div class="col-md-12 text-center">
+                    <p><small> <br>Diseñado por: <a href="https://github.com/JoaquinGA01/registro_imagenes"
+                                target="_blank">JoaquinGA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<!-- Salvattore -->
-	<script src="js/salvattore.min.js"></script>
-	<!-- Main JS -->
-	<script src="js/main.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Salvattore -->
+    <script src="js/salvattore.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 
 
 
