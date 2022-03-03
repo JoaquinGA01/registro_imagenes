@@ -50,11 +50,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
          
         // Close statement
-        $stmt->close();
+        $db->close();
     }
     
     // Close connection
-    $db->close();
+    
 }
 ?>
 
@@ -129,7 +129,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="animate-box">
                             <a href="data:image/png;base64,<?php echo  base64_encode($respuesta['Imagen']); ?> "
                                 class="image-popup fh5co-board-img" title="<?php echo $respuesta['Descripcion'] ?>">
-                                <img width="200"
+                                <img width="50%"
                                     src="data:image/png;base64,<?php echo  base64_encode($respuesta['Imagen']); ?> ">
                             </a>
                         </div>
